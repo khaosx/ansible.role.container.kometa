@@ -1,0 +1,219 @@
+# {{ ansible_managed | comment }}
+#
+
+libraries:
+  movies:
+    library_name: {{ movies_library_name }}
+    report_path: {{ reports_dir }}/movies.yml
+    metadata_files:
+      - file: {{ metafiles_dir }}/movies-metadata.yml
+    collection_files:
+      - file: {{ metafiles_dir }}/movies-collections.yml
+    operations:
+      delete_collections:
+        configured: true
+        managed: true
+        less: 2
+    radarr:
+      url: https://{{ radarr_url }}
+      token: {{ radarr_token }}
+      root_folder_path: {{ radarr_root_folder }}
+      quality_profile: {{ radarr_quality }}
+      monitor: false
+      availability: released
+      tag: {{ tag_hd }}
+      search: true
+      add_missing: false
+      add_existing: false
+      radarr_path:
+      plex_path:
+      upgrade_existing: false
+      ignore_cache: false
+      monitor_existing: false
+  movies4k:
+    library_name: {{ movies_4k_library_name }}
+    report_path: {{ reports_dir }}/movies4k.yml
+    metadata_files:
+      - file: {{ metafiles_dir }}/movies4k-metadata.yml
+    collection_files:
+      - file: {{ metafiles_dir }}/movies4k-collections.yml
+    operations:
+      delete_collections:
+        configured: true
+        managed: true
+        less: 2
+    radarr:
+      url: https://{{ radarr_4k_url }}
+      token: {{ radarr_4k_token }}
+      root_folder_path: {{ radarr_4k_root_folder }}
+      quality_profile: {{ radarr_4k_quality }}
+      monitor: true
+      availability: released
+      tag: {{ tag_4k }}
+      search: true
+      add_missing: false
+      add_existing: false
+      radarr_path:
+      plex_path:
+      upgrade_existing: false
+      ignore_cache: false
+      monitor_existing: false
+  tv:
+    library_name: {{ tv_library_name }}
+    report_path: {{ reports_dir }}/tv.yml
+    metadata_files:
+      - file: {{ metafiles_dir }}/tv-metadata.yml
+    collection_files:
+      - file: {{ metafiles_dir }}/tv-collections.yml
+    operations:
+      delete_collections:
+        configured: true
+        managed: true
+        less: 2
+    sonarr:
+      url: https://{{ sonarr_url }}
+      token: {{ sonarr_token }}
+      root_folder_path: {{ sonarr_root_folder }}
+      quality_profile: {{ sonarr_quality }}
+      add_missing: false
+      add_existing: false
+      monitor: none
+      language_profile: English
+      series_type: standard
+      season_folder: true
+      tag: {{ tag_hd }}
+      search: false
+      cutoff_search: false
+      sonarr_path:
+      plex_path:
+      upgrade_existing: false
+      ignore_cache: false
+      monitor_existing: false
+  tv4k:
+    library_name: {{ tv_4k_library_name }}
+    report_path: {{ reports_dir }}/tv4k.yml
+    metadata_files:
+      - file: {{ metafiles_dir }}/tv4k-metadata.yml
+    collection_files:
+      - file: {{ metafiles_dir }}/tv4k-collections.yml
+    operations:
+      delete_collections:
+        configured: true
+        managed: true
+        less: 2
+    sonarr:
+      url: https://{{ sonarr_4k_url }}
+      token: {{ sonarr_4k_token }}
+      root_folder_path: {{ sonarr_4k_root_folder }}
+      quality_profile: {{ sonarr_4k_root_folder }}
+      add_missing: false
+      add_existing: false
+      monitor: none
+      language_profile: English
+      series_type: standard
+      season_folder: true
+      tag: {{ tag_4k }}
+      search: false
+      cutoff_search: false
+      sonarr_path:
+      plex_path:
+      upgrade_existing: false
+      ignore_cache: false
+      monitor_existing: false
+playlist_files:
+  - file: {{ playlist_file }}
+settings:
+  cache: true
+  cache_expiration: 30
+  asset_directory: /config/assets
+  asset_folders: true
+  asset_depth: 3
+  create_asset_folders: true
+  prioritize_assets: true
+  dimensional_asset_rename: false
+  download_url_assets: true
+  show_missing_season_assets: false
+  show_missing_episode_assets: false
+  show_asset_not_needed: false
+  sync_mode: sync
+  minimum_items: 2
+  default_collection_order: release
+  delete_below_minimum: true
+  delete_not_scheduled: true
+  run_again_delay: 2
+  missing_only_released: true
+  only_filter_missing: false
+  show_unmanaged: true
+  show_unconfigured: true
+  show_filtered: false
+  show_options: false
+  show_missing: false
+  show_missing_assets: false
+  save_report: true
+  tvdb_language: eng
+  ignore_ids:
+  ignore_imdb_ids:
+  item_refresh_delay: 0
+  playlist_exclude_users:
+  playlist_report: true
+  verify_ssl: false
+  check_nightly: false
+  custom_repo: 
+  playlist_sync_to_users:
+  run_order:
+    - operations
+    - metadata
+    - collections
+    - overlays
+  overlay_artwork_filetype: jpg
+  overlay_artwork_quality:
+webhooks:
+  error: 
+  run_start: 
+  run_end: 
+  changes:
+  version: 
+  delete:
+plex:
+  url: {{ plex_url }}
+  token: {{ plex_token }}
+  timeout: 60
+  clean_bundles: true
+  empty_trash: true
+  optimize: true
+  db_cache: 1024
+  verify_ssl:
+tmdb:
+  apikey: {{ tmdb_api_key }}
+  language: en
+  cache_expiration: 10
+  region:
+tautulli:
+  url: {{ tautulli_url }}
+  apikey: {{ tautulli_api_key }}
+notifiarr:
+  apikey: {{ notifier_apikey }}
+anidb:
+  username: {{ anidb_username }}
+  password: {{ anidb_password }}
+trakt:
+  client_id: {{ trakt_client_id }}
+  client_secret: {{ trakt_client_secret }}
+  pin:
+  authorization:
+    # everything below is autofilled by the script
+    access_token:
+    token_type:
+    expires_in:
+    refresh_token:
+    scope: public
+    created_at:
+mal:
+  client_id: {{ mal_client_id }}
+  client_secret: {{ mal_client_secret }}
+  authorization:
+    # everything below is autofilled by the script
+    access_token:
+    token_type:
+    expires_in:
+    refresh_token:

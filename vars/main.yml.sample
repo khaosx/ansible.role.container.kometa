@@ -1,0 +1,59 @@
+---
+
+# Plex Info
+tv_library_name: [Replace this value]
+movies_library_name: [Replace this value]
+tv_4k_library_name: [Replace this value]
+movies_4k_library_name: [Replace this value]
+
+# Sonarr Info
+sonarr_url: [Replace this value]
+sonarr_token: [Replace this value]
+sonarr_quality: [Replace this value]
+sonarr_root_folder: [Replace this value]
+sonarr_4k_url: [Replace this value]
+sonarr_4k_token: [Replace this value]
+sonarr_4k_quality: [Replace this value]
+sonarr_4k_root_folder: [Replace this value]
+
+# Radarr Info
+radarr_url: [Replace this value]
+radarr_token: [Replace this value]
+radarr_quality: [Replace this value]
+radarr_root_folder: [Replace this value]
+radarr_4k_url: [Replace this value]
+radarr_4k_token: [Replace this value]
+radarr_4k_quality: [Replace this value]
+radarr_4k_root_folder: [Replace this value]
+
+# Service ports
+sabnzbd_con_port: [Replace this value]
+sonarr_con_port: [Replace this value]
+sonarr4k_con_port: [Replace this value]
+radarr_con_port: [Replace this value]
+radarr4k_con_port: [Replace this value]
+prowlarr_con_port: [Replace this value]
+lidarr_con_port: [Replace this value]
+readarr_con_port: [Replace this value]
+homepage_ui_port: [Replace this value]
+audiobookshelf_ui_port: [Replace this value]
+overseerr_con_port: [Replace this value]
+
+# Kometa Info
+reports_dir: [Replace this value]
+metafiles_dir: [Replace this value]
+playlist_file: [Replace this value]
+tag_hd: [Replace this value]
+tag_4k: [Replace this value]
+plex_url: [Replace this value]
+plex_token: [Replace this value]
+tmdb_api_key: [Replace this value]
+tautulli_url: [Replace this value]
+tautulli_api_key: [Replace this value]
+notifier_apikey: b2159bab-317f-4d3b-a173-aa7692e257dc
+anidb_username: [Replace this value]
+anidb_password: [Replace this value]
+trakt_client_id: [Replace this value]
+trakt_client_secret: [Replace this value]
+mal_client_id: [Replace this value]
+mal_client_secret: [Replace this value]
