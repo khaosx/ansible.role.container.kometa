@@ -1,0 +1,11 @@
+galaxy_info:
+  author: Kristopher Newman
+  description: Deploys container for kometa
+  license: license (Unlicense)
+  min_ansible_version: '2.1'
+  galaxy_tags: [
+    docker
+    container
+    kometa
+    ]
+dependencies: []
